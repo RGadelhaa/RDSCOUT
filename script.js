@@ -29,6 +29,14 @@ let bargerp = 'False'
 let faltas = 0;
 let currentPage = 1;
 
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/service-worker.js')
+      .then(() => console.log("Service Worker registrado!"))
+      .catch((err) => console.log("Erro no Service Worker", err));
+  });
+}
+
 function nextPage(pageId) {
   let current = document.getElementById(pageId);
   current.classList.remove('active');
