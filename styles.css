@@ -223,14 +223,12 @@ input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-o
   display: flex;
   flex-direction: row;
   gap: 60px;
-  justify-content: center;
-  flex-wrap: wrap;}
+  justify-content: center;}
 .Organizationl3l4{
   display: flex;
   flex-direction: row;
   gap: 60px;
   justify-content: center;
-  flex-wrap: wrap;
 }
 .OrganizationBtn1Page2{
   padding-top: 30px;
