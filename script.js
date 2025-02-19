@@ -739,7 +739,6 @@ form.addEventListener('submit', e => {
   }
 });
 function resetForm() {
-  form.reset();
   document.getElementById("txtScouter").value = "";
   document.getElementById("txtMatch").value = "";
   document.getElementById("Team").value = "";
@@ -786,6 +785,7 @@ function resetForm() {
     updateDisplayReefL4acertadoTeleop();
     updateDisplayProcessoracertadoTeleop();
     updateDisplayNetacertadoTeleop();
+    updateDisplayFaltas();
 
     document.querySelectorAll("input[type='text'], input[type='number']").forEach(input => {
         input.value = "";
