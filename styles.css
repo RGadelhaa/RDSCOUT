@@ -356,24 +356,24 @@ input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-o
   border: 3px solid #d8c799;
   background-color: #6a5c6a;
   margin: 10px 0;
-  padding: 13px;
+  padding: 12px;
   font-size: 24px;
   border-radius: 4px;
-  width: 170px;}
+  width: 110px;}
 .AreaDisplayCinza {
   border: 3px solid #a6a6a6;
   background-color: #6a5c6a;
   margin: 10px 0;
-  padding: 13px;
+  padding: 12px;
   font-size: 24px;
   border-radius: 4px;
-  width: 170px;}
+  width: 110px;}
 .Areabtnstyle{
   display: flex;
   flex-direction: row;  /* Alinha verticalmente */
   align-items: center; /* Centraliza horizontalmente */
   justify-content: center;
-  gap: 20px; /* Espaço entre os elementos */}
+  gap: 10px; /* Espaço entre os elementos */}
 .btnestilizados{
   background: linear-gradient(45deg, #f3a847, #f7c13e);
   border: none;
@@ -381,7 +381,7 @@ input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-o
   font-size: 100%;
   padding: 7% 21%;
   cursor: pointer;
-  border-radius: 4%;
+  border-radius: 8%;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;}
 .btnestilizados:hover {
