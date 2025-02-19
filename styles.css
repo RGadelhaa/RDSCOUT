@@ -158,7 +158,7 @@ input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-o
   justify-content: center;
   text-align: center;
   display: flex;
-  padding-top: 8px;
+  padding-top: 25px;
   flex-direction: row;
   flex: wrap;
   gap: 20%;}
@@ -222,12 +222,12 @@ input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-o
 .Organizationl1l2{
   display: flex;
   flex-direction: row;
-  gap: 60px;
+  gap: 30px;
   justify-content: center;}
 .Organizationl3l4{
   display: flex;
   flex-direction: row;
-  gap: 60px;
+  gap: 30px;
   justify-content: center;
 }
 .OrganizationBtn1Page2{
@@ -239,19 +239,19 @@ input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-o
 }
 .OrganizationReef{
   display: flex;
-  flex-direction: row;
-  gap: 60px;
+  flex-direction: column;
+  gap: 30px;
   padding-top: 12px;
   padding-bottom: 40px;
   justify-content: center;
   flex-wrap: wrap;
+  flex-direction: row;
 }
 .OrganizationAlga{
   display: flex;
   flex-direction: row;
-  gap: 70px;
+  gap: 30px;
   justify-content: center;
-  flex-wrap: wrap;
 }
 .H2N1Page2{
   color: #d8c799;
@@ -356,18 +356,18 @@ input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-o
   border: 3px solid #d8c799;
   background-color: #6a5c6a;
   margin: 10px 0;
-  padding: 10px;
+  padding: 13px;
   font-size: 24px;
   border-radius: 4px;
-  width: 200px;}
+  width: 170px;}
 .AreaDisplayCinza {
   border: 3px solid #a6a6a6;
   background-color: #6a5c6a;
   margin: 10px 0;
-  padding: 10px;
+  padding: 13px;
   font-size: 24px;
   border-radius: 4px;
-  width: 200px;}
+  width: 170px;}
 .Areabtnstyle{
   display: flex;
   flex-direction: row;  /* Alinha verticalmente */
