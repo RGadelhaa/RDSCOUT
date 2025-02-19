@@ -29,6 +29,11 @@ let bargerp = 'False'
 let faltas = 0;
 let currentPage = 1;
 
+window.addEventListener("beforeunload", function (event) {
+  event.preventDefault();
+  event.returnValue = "";
+});
+
 function nextPage(pageId) {
   let current = document.getElementById(pageId);
   current.classList.remove('active');
