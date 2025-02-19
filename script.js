@@ -543,7 +543,7 @@ function diminuirnumNetacertadoAuto() {
 function updateDisplayNetacertadoAuto() {
   document.getElementById("numDisplayNetacertadoAuto").innerText = numNetacertadoAuto;
 }
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////
 function aumentarnumReefacertadoTeleop() {
   numReefacertadoTeleop++;
   updateDisplayReefacertadoTeleop();
@@ -799,7 +799,7 @@ function resetForm() {
     
     clearQRCode();
     goToPage1();
-    submitButton.disabled = false; // Reabilita o botão de envio
+    submitButton.disabled = false;
 }
 
 function goToPage1() {
