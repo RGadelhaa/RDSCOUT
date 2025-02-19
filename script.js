@@ -29,14 +29,6 @@ let bargerp = 'False'
 let faltas = 0;
 let currentPage = 1;
 
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/service-worker.js')
-      .then((reg) => console.log('Service Worker registrado!', reg))
-      .catch((err) => console.log('Erro no Service Worker:', err));
-  });
-}
-
 function nextPage(pageId) {
   let current = document.getElementById(pageId);
   current.classList.remove('active');
@@ -747,6 +739,7 @@ form.addEventListener('submit', e => {
   }
 });
 function resetForm() {
+  form.reset();
   document.getElementById("txtScouter").value = "";
   document.getElementById("txtMatch").value = "";
   document.getElementById("Team").value = "";
@@ -806,6 +799,7 @@ function resetForm() {
     
     clearQRCode();
     goToPage1();
+    submitButton.disabled = false; // Reabilita o botão de envio
 }
 
 function goToPage1() {
