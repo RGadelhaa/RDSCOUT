@@ -752,62 +752,75 @@ function resetForm() {
   document.getElementById("Team").value = "";
   document.getElementById("txtFalhasEObservações").value = "";
   
-    zonainicial = 'False';
-    coralStation = 'False';
-    numReefacertadoAuto = 0;
-    numReefL2acertadoAuto = 0;
-    numReefL3acertadoAuto = 0;
-    numReefL4acertadoAuto = 0;
-    numProcessoracertadoAuto = 0;
-    numNetacertadoAuto = 0;
-    tiraalga = 'False';
-    numReefacertadoTeleop = 0;
-    numReefL2acertadoTeleop = 0;
-    numReefL3acertadoTeleop = 0;
-    numReefL4acertadoTeleop = 0;
-    numProcessoracertadoTeleop = 0;
-    numNetacertadoTeleop = 0;
-    regionalvalue = 'BSB';
-    matchtypevalue = '';
-    teamcolorvalue = '';
-    teamposition = '';
-    finalposition = '';
-    coopertition = 'False';
-    defesa = 'False'
-    roboparou = 'False';
-    autorp = 'False';
-    coralrp = 'False';
-    bargerp = 'False';
-    faltas = 0;
-    currentPage = 1;
+  zonainicial = 'False';
+  coralStation = 'False';
+  numReefacertadoAuto = 0;
+  numReefL2acertadoAuto = 0;
+  numReefL3acertadoAuto = 0;
+  numReefL4acertadoAuto = 0;
+  numProcessoracertadoAuto = 0;
+  numNetacertadoAuto = 0;
+  tiraalga = 'False';
+  numReefacertadoTeleop = 0;
+  numReefL2acertadoTeleop = 0;
+  numReefL3acertadoTeleop = 0;
+  numReefL4acertadoTeleop = 0;
+  numProcessoracertadoTeleop = 0;
+  numNetacertadoTeleop = 0;
+  regionalvalue = 'BSB';
+  matchtypevalue = '';
+  teamcolorvalue = '';
+  teamposition = '';
+  finalposition = '';
+  coopertition = 'False';
+  defesa = 'False';
+  roboparou = 'False';
+  autorp = 'False';
+  coralrp = 'False';
+  bargerp = 'False';
+  faltas = 0;
+  currentPage = 1;
 
-    updateDisplayReefacertadoAuto();
-    updateDisplayReefL2acertadoAuto();
-    updateDisplayReefL3acertadoAuto();
-    updateDisplayReefL4acertadoAuto();
-    updateDisplayProcessoracertadoAuto();
-    updateDisplayNetacertadoAuto();
-    updateDisplayReefacertadoTeleop();
-    updateDisplayReefL2acertadoTeleop();
-    updateDisplayReefL3acertadoTeleop();
-    updateDisplayReefL4acertadoTeleop();
-    updateDisplayProcessoracertadoTeleop();
-    updateDisplayNetacertadoTeleop();
-    updateDisplayFaltas();
+  updateDisplayReefacertadoAuto();
+  updateDisplayReefL2acertadoAuto();
+  updateDisplayReefL3acertadoAuto();
+  updateDisplayReefL4acertadoAuto();
+  updateDisplayProcessoracertadoAuto();
+  updateDisplayNetacertadoAuto();
+  updateDisplayReefacertadoTeleop();
+  updateDisplayReefL2acertadoTeleop();
+  updateDisplayReefL3acertadoTeleop();
+  updateDisplayReefL4acertadoTeleop();
+  updateDisplayProcessoracertadoTeleop();
+  updateDisplayNetacertadoTeleop();
+  updateDisplayFaltas();
 
-    document.querySelectorAll("input[type='text'], input[type='number']").forEach(input => {
-        input.value = "";
-    });
+  // Resetando todos os campos de input
+  document.querySelectorAll("input[type='text'], input[type='number']").forEach(input => {
+      input.value = "";
+  });
+  document.querySelectorAll('.selected, .deselected').forEach(button => {
+    button.classList.remove('selected', 'deselected');
+});
 
-    document.querySelectorAll('.selected, .deselected').forEach(button => {
-        button.classList.remove('selected', 'deselected');
-    });
+  // Resetando os botões da aliança (removendo seleção e restaurando o HTML)
+  const redButton = document.getElementById('btnRed');
+  const blueButton = document.getElementById('btnBlue');
 
-    console.log("Formulário resetado!");
-    
-    clearQRCode();
-    goToPage1();
-    submitButton.disabled = false;
+  redButton.classList.remove('selected', 'deselected');
+  blueButton.classList.remove('selected', 'deselected');
+
+  redButton.innerHTML = '⠀'; // Volta ao estado original sem imagem
+  blueButton.innerHTML = '⠀'; // Volta ao estado original sem imagem
+
+  redButton.style.backgroundColor = 'red';
+  blueButton.style.backgroundColor = 'blue';
+
+  console.log("Formulário resetado!");
+
+  clearQRCode();
+  goToPage1();
+  submitButton.disabled = false;
 }
 
 function goToPage1() {
