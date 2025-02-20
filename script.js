@@ -70,29 +70,32 @@ function disableButtons(pageId) {
 
 function selectOptionColor(color) {
          
-  const buttons = document.querySelectorAll('.StyleBtnAlliance');
+  const redButton = document.getElementById('btnRed');
+  const blueButton = document.getElementById('btnBlue');
 
-  if (!teamcolorvalue) {  
-             
-    buttons.forEach(btn => btn.classList.add('deselected'));
+  if (color === 'Red') {
+      redButton.innerHTML = '<img src="images/ArenaRed.png" alt="Red Selected" style="width: 100%; height: 100%; border-radius: 50%;">';
+      redButton.classList.add('selected');
+      redButton.classList.remove('deselected');
+
+      blueButton.innerHTML = '⠀'; // Restaura o botão azul
+      blueButton.classList.remove('selected');
+      blueButton.classList.add('deselected');
+      blueButton.style.backgroundColor = 'blue';
+  } else if (color === 'Blue') {
+      blueButton.innerHTML = '<img src="images/ArenaBlue.png" alt="Blue Selected" style="width: 100%; height: 100%; border-radius: 50%;">';
+      blueButton.classList.add('selected');
+      blueButton.classList.remove('deselected');
+
+      redButton.innerHTML = '⠀'; // Restaura o botão vermelho
+      redButton.classList.remove('selected');
+      redButton.classList.add('deselected');
+      redButton.style.backgroundColor = 'red';
   }
 
-  buttons.forEach(btn => btn.classList.remove('selected'));
-
-  const selectedButton = document.getElementById(`btn${color}`);
-  selectedButton.classList.add('selected');
-  selectedButton.classList.remove('deselected');
-
-
   teamcolorvalue = color;
-
-  buttons.forEach(btn => {
-      if (btn !== selectedButton) {
-          btn.classList.add('deselected');
-       }
-  });
-
-  console.log('Selected Color:', teamcolorvalue);} 
+  console.log('Selected Color:', teamcolorvalue);
+}
 
 function selectOptionMT(mt) {
          

@@ -62,7 +62,7 @@ input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-o
 .OrganizationBtnPage1{
   display: flex;
   flex-direction: column;
-  gap: 40px;}
+  gap: 30px;}
 .AreaMatchType{
   text-align: center;}
 .H2AreaBtnPage1{ 
@@ -101,14 +101,13 @@ input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-o
 .AreaBtnAlliance{
   display: flex;
   flex-direction: row;
-  gap: 15px;
   justify-content: center;}
 .StyleBtnAlliance{
   text-align: center;
   justify-content: center;
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
+  width: 110px;
+  height: 110px;
+  border-radius: 10%;
   cursor: pointer;
   transition: all 0.3s ease;}
 .StyleBtnAlliance img{
@@ -120,7 +119,7 @@ input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-o
 .StyleBtnAlliance#btnBlue{
   background-color: blue;}
 .StyleBtnAlliance.selected{
-  transform: scale(1.2);
+  transform: scale(1.25);
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);}
 .StyleBtnAlliance.deselected{
   transform: scale(0.7);
@@ -158,7 +157,7 @@ input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-o
   justify-content: center;
   text-align: center;
   display: flex;
-  padding-top: 25px;
+  padding-top: 10px;
   flex-direction: row;
   flex: wrap;
   gap: 20%;}
@@ -202,7 +201,6 @@ input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-o
   flex: wrap;
   gap: 20%;
   padding-top: 10px;}
-
 .nextpagebtn{
   background: transparent;
   border: none;
