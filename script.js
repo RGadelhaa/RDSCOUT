@@ -30,11 +30,11 @@ let faltas = 0;
 let currentPage = 1;
 
 if ("serviceWorker" in navigator) {
-  navigator.serviceWorker.register("/service-worker.js")
-    .then(reg => console.log("Service Worker registrado!", reg))
-    .catch(err => console.error("Erro ao registrar o Service Worker:", err));
-} else {
-  console.log("Service Workers não são suportados neste navegador.");
+  navigator.serviceWorker.register("/service-worker.js").then(() => {
+    console.log("Service Worker registrado!");
+  }).catch((error) => {
+    console.log("Falha ao registrar Service Worker:", error);
+  });
 }
 
 window.addEventListener("beforeunload", function (event) {
