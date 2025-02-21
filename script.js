@@ -1038,9 +1038,7 @@ if (window.matchMedia("(display-mode: standalone)").matches) {
   }, 5000);
 }
 if ("serviceWorker" in navigator) {
-  navigator.serviceWorker.register("/service-worker.js").then(() => {
-    console.log("Service Worker registrado!");
-  }).catch((error) => {
-    console.log("Falha ao registrar Service Worker:", error);
-  });
+  navigator.serviceWorker.register("/service-worker.js")
+    .then(() => console.log("Service Worker registrado com sucesso!"))
+    .catch((error) => console.log("Falha ao registrar o Service Worker:", error));
 }
