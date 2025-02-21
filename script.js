@@ -1030,7 +1030,7 @@ if (window.matchMedia("(display-mode: standalone)").matches) {
     });
   });
 
-  // Tenta detectar a instalação mesmo sem o evento `beforeinstallprompt`
+  //Tenta detectar a instalação mesmo sem o evento `beforeinstallprompt`
   setTimeout(() => {
     if (deferredPrompt === undefined) {
       document.getElementById("install-button").style.display = "block";
