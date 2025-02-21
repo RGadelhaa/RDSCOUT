@@ -1004,3 +1004,36 @@ function salvarCSV() {
   document.body.removeChild(link);
   console.log("Arquivo salvo");
 }
+let deferredPrompt;
+
+// Verifica se o app pode ser instalado
+if (window.matchMedia("(display-mode: standalone)").matches) {
+  console.log("O app já está instalado!");
+} else {
+  window.addEventListener("beforeinstallprompt", (event) => {
+    event.preventDefault();
+    deferredPrompt = event;
+
+    const installButton = document.getElementById("install-button");
+    installButton.style.display = "block"; // Exibe o botão
+
+    installButton.addEventListener("click", () => {
+      deferredPrompt.prompt();
+      deferredPrompt.userChoice.then((choice) => {
+        if (choice.outcome === "accepted") {
+          console.log("Usuário aceitou a instalação!");
+        } else {
+          console.log("Usuário recusou a instalação!");
+        }
+        deferredPrompt = null;
+      });
+    });
+  });
+
+  // Tenta detectar a instalação mesmo sem o evento `beforeinstallprompt`
+  setTimeout(() => {
+    if (deferredPrompt === undefined) {
+      document.getElementById("install-button").style.display = "block";
+    }
+  }, 5000);
+}
