@@ -1037,3 +1037,10 @@ if (window.matchMedia("(display-mode: standalone)").matches) {
     }
   }, 5000);
 }
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("/service-worker.js").then(() => {
+    console.log("Service Worker registrado!");
+  }).catch((error) => {
+    console.log("Falha ao registrar Service Worker:", error);
+  });
+}
