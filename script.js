@@ -29,6 +29,14 @@ let bargerp = 'False'
 let faltas = 0;
 let currentPage = 1;
 
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("/service-worker.js")
+    .then(reg => console.log("Service Worker registrado!", reg))
+    .catch(err => console.error("Erro ao registrar o Service Worker:", err));
+} else {
+  console.log("Service Workers não são suportados neste navegador.");
+}
+
 window.addEventListener("beforeunload", function (event) {
   event.preventDefault();
   event.returnValue = "";
@@ -1036,9 +1044,4 @@ if (window.matchMedia("(display-mode: standalone)").matches) {
       document.getElementById("install-button").style.display = "block";
     }
   }, 5000);
-}
-if ("serviceWorker" in navigator) {
-  navigator.serviceWorker.register("/service-worker.js")
-    .then(() => console.log("Service Worker registrado com sucesso!"))
-    .catch((error) => console.log("Falha ao registrar o Service Worker:", error));
 }
